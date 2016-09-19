@@ -1,0 +1,95 @@
+Human Linkage and Association Analysis
+
+Supplementary Notes, lecture 3
+
+Using the LINKAGE program package for two-point (sometimes called single-point)
+	linkage analysis (cf. http://linkage.rockefeller.edu/soft/linkage
+	for additional documentation)
+
+"LINKAGE" format for input data files
+
+2 files: 
+a pedigree file (.pre file)
+a marker-information file
+
+Pedigree file format:
+for .pre files:
+column:	   	
+1:	pedigree/family id
+2:	individual id
+3:	individual's father
+	(if the individual is a founder, put 0)
+4: 	individual's mother
+	(if the individual is a founder, put 0)
+5:	gender
+	(1=male, 2=female)
+6:	phenotype
+	(0=unknown, 1=unaffected, 2=affected)
+7+:	genetic data (marker genotypes)
+	(for this course, will use allele numbers to code genotypes:
+	hence cols 7, 8: allele numbers for 1st marker)
+
+example:
+1  1  0     0      1     1     1 2     
+1  2  0     0      2     1     2 2
+1  5  1     2      2     1     1 2
+1  6  1     2      1     2     1 2
+
+Marker file format (a.k.a parameter file):
+	(for two-point analysis of a single marker and the trait)
+
+example:
+ 2 0 0 5  << NO. OF LOCI, RISK LOCUS, SEXLINKED (IF 1) PROGRAM
+ 0 0.0 0.0 0  << MUT LOCUS, MUT RATE, HAPLOTYPE FREQUENCIES (IF 1)
+  1  2  << ORDER OF LOCI	  
+1   2  << AFFECTION, NO. OF ALLELES
+ 0.990 0.010   << GENE FREQUENCIES
+ 1 << NO. OF LIABILITY CLASSES
+ 0.001 0.9900 0.9900 << PENETRANCES
+3   5  << ALLELE NUMBERS, NO. OF ALLELES
+ 0.2 0.2 0.2 0.2 0.2 << GENE FREQUENCIES
+ 0 0  << SEX DIFFERENCE, INTERFERENCE (IF 1 OR 2)
+ 0.00000 << RECOMBINATION VALUES
+ 1 0.020000 0.20000 << REC VARIED, INCREMENT, FINISHING VALUE
+
+Line:	Entry:
+1:	1:	-number of loci (the disease phenotype counts as 1 locus)
+	2:	-risk locus (=0 if no risk calculation; otherwise put 
+			disease locus number
+			(input order, usually 1) to calculate risk)
+	3:	-sex linked (0=autosomal data; 1=sexlinked data)
+	4:	-program type (1=CILINK, 2=CMAP, 3=ILINK, 4=LINKMAP
+				5=MLINK, 6=LODSCORE, 7=CLODSCORE)
+2:	1:	-mutation locus (0 if mutation rates are to be 0, o
+			therwise locus number (input order))
+	2:	-male mutation rate
+	3:	-female mutation rate
+	4:	-0 if loci assumed to be in linkage equilibrium, 1 loci assumed in 
+			linkage disequilibrium
+3:		-List loci in order desired (where loci are numbered in order
+		of appearance below, which (if multiple loci are involved)
+		should match the order the corresponding
+		genotypes appear in the pedigree .pre file)
+4:	1:	-Phenotype information 
+		(1 = affected/unaffected)
+	2:	-number of alleles 
+5:		-allele frequencies for the trait locus (must sum to 1)
+		note that allele order must be consistent with the penetrances given below
+6:		-number of liability classes 
+7:		-penetrances for the different disease genotypes, 
+		in the order 11  12  22
+		where 1 is the allele corresponding to the 1st allele freq on line 5
+		and 2 is the allele corresponding to the 2nd allele freq on line 5
+8:	1:	-code to specify how the marker alleles will be represented.
+		code 3 = allele numbers (the usual representation)
+	2:	-gives the number of alleles for the marker
+9:		-gives the allele frequencies for the marker alleles
+10:		-specifies if sex differences or interference will be assumed
+11:		-recombination starting value
+12:	1:	-code to specify if recomb fraction is to be varied (1 = yes, varied)
+	2:	-increment 
+	3:	-stopping value for recomb fraction
+
+NOTE: 	any text to the right of the "<<" symbols is considered a comment, and 
+	is not read by the LINKAGE programs
+
