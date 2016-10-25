@@ -1,0 +1,47 @@
+
+@----------------------------------------------------------@
+|        PLINK!       |     v1.07      |   10/Aug/2009     |
+|----------------------------------------------------------|
+|  (C) 2009 Shaun Purcell, GNU General Public License, v2  |
+|----------------------------------------------------------|
+|  For documentation, citation & bug-report instructions:  |
+|        http://pngu.mgh.harvard.edu/purcell/plink/        |
+@----------------------------------------------------------@
+
+Web-based version check ( --noweb to skip )
+Recent cached web-check found...Problem connecting to web
+
+Writing this text to log file [ mod1.log ]
+Analysis started: Thu Oct 13 11:01:09 2016
+
+Options in effect:
+	--bfile hapmap1
+	--model
+	--snp rs2222162
+	--out mod1
+
+Reading map (extended format) from [ hapmap1.bim ] 
+83534 markers to be included from [ hapmap1.bim ]
+Scan region on chromosome 2 from [ rs2222162 ] to [ rs2222162 ]
+Reading pedigree information from [ hapmap1.fam ] 
+89 individuals read from [ hapmap1.fam ] 
+89 individuals with nonmissing phenotypes
+Assuming a disease phenotype (1=unaff, 2=aff, 0=miss)
+Missing phenotype value is also -9
+44 cases, 45 controls and 0 missing
+89 males, 0 females, and 0 of unspecified sex
+Reading genotype bitfile from [ hapmap1.bed ] 
+Detected that binary PED file is v1.00 SNP-major mode
+Before frequency and genotyping pruning, there are 1 SNPs
+89 founders and 0 non-founders found
+Total genotyping rate in remaining individuals is 1
+0 SNPs failed missingness test ( GENO > 1 )
+0 SNPs failed frequency test ( MAF < 0 )
+After frequency and genotyping pruning, there are 1 SNPs
+After filtering, 44 cases, 45 controls and 0 missing
+After filtering, 89 males, 0 females, and 0 of unspecified sex
+Full-model association tests, minimum genotype count: --cell 5
+Writing full model association results to [ mod1.model ] 
+
+Analysis finished: Thu Oct 13 11:01:10 2016
+

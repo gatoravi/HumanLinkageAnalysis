@@ -1,0 +1,31 @@
+# Run slink
+# INPUT to Slink:  simped.dat  -- pedigree file
+#                  simdata.dat -- locus description file
+#                  slinkin.dat -- input parameters
+# Slink produces pedfile.dat (the simulated data)
+#
+#  *** Edit the following cp commands to give your files  
+#
+if (-e simped.dat) rm -f simped.dat    
+cp simped.inf.dat simped.dat
+if (-e simdata.dat) rm -f simdata.dat    
+cp simdata.inf.dat simdata.dat
+if (-e pedfile.dat) rm -f pedfile.dat    
+echo "Running slink"
+echo ' '
+/usr/local/bin/slink
+
+# Note:  The analysis file can be different than the simulation file
+if (-e datafile.dat) rm -f datafile.dat    
+cp simdata.inf.dat datafile.dat
+echo "Running unknown"
+echo ' '
+/home/gems/bin/unknown
+echo "Running msim"
+echo ' '
+/usr/local/bin/msim
+
+if (-e speedfile.dat) rm -f speedfile.dat    
+if (-e ipedfile.dat) rm -f ipedfile.dat    
+
+

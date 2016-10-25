@@ -1,0 +1,53 @@
+
+@----------------------------------------------------------@
+|        PLINK!       |     v1.07      |   10/Aug/2009     |
+|----------------------------------------------------------|
+|  (C) 2009 Shaun Purcell, GNU General Public License, v2  |
+|----------------------------------------------------------|
+|  For documentation, citation & bug-report instructions:  |
+|        http://pngu.mgh.harvard.edu/purcell/plink/        |
+@----------------------------------------------------------@
+
+Web-based version check ( --noweb to skip )
+Connecting to web... 
+
+          *** UPDATE REQUIRED ***
+
+	This version        : 1.07 
+	Most recent version : 1.06
+
+Please upgrade your version of PLINK as soon as possible!
+  (visit the above website for free download)
+
+Old versions of PLINK (<1.06) contain bugs fixed in 1.06 
+
+Writing this text to log file [ hapmap1.log ]
+Analysis started: Wed Nov 11 15:00:41 2009
+
+Options in effect:
+	--file hapmap1
+	--make-bed
+	--out hapmap1
+
+83534 (of 83534) markers to be included from [ hapmap1.map ]
+89 individuals read from [ hapmap1.ped ] 
+89 individuals with nonmissing phenotypes
+Assuming a disease phenotype (1=unaff, 2=aff, 0=miss)
+Missing phenotype value is also -9
+44 cases, 45 controls and 0 missing
+89 males, 0 females, and 0 of unspecified sex
+Before frequency and genotyping pruning, there are 83534 SNPs
+89 founders and 0 non-founders found
+Total genotyping rate in remaining individuals is 0.99441
+0 SNPs failed missingness test ( GENO > 1 )
+0 SNPs failed frequency test ( MAF < 0 )
+After frequency and genotyping pruning, there are 83534 SNPs
+After filtering, 44 cases, 45 controls and 0 missing
+After filtering, 89 males, 0 females, and 0 of unspecified sex
+Writing pedigree information to [ hapmap1.fam ] 
+Writing map (extended format) information to [ hapmap1.bim ] 
+Writing genotype bitfile to [ hapmap1.bed ] 
+Using (default) SNP-major mode
+
+Analysis finished: Wed Nov 11 15:00:48 2009
+

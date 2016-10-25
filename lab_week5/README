@@ -1,0 +1,2 @@
+#Copy files over
+cp -r /home/gems/slink/* .

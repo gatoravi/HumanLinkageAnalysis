@@ -1,0 +1,32 @@
+ The random number seed is: 29876
+ The number of replications is:   200
+ The requested proportion of unlinked families is:  0.000
+ The trait locus is locus number:   1
+    Summary Statistics about simped.dat 
+ Number of pedigrees       1
+ Number of people         17
+ Number of females         1
+ Number of males          16
+ There were   0 in category:  Marker Unknown; Trait original
+ There were   0 in category:  Marker Available; Trait simulated
+ There were  17 in category:  Marker Available; Trait original
+ There were   0 in category:  Marker Unknown; Trait simulated
+LINKAGE/SLINK (V2.51) WITH  2-POINT AUTOSOMAL DATA
+-----------------------------------
+ LINKED ORDER OF LOCI:   1  2
+-----------------------------------
+-----------------------------------
+-----------------------------------
+TRUE THETAS FOR LINKED ORDER    0.000000
+-----------------------------------
+-----------------------------------
+ UNLINKED ORDER OF LOCI:   1  2
+-----------------------------------
+-----------------------------------
+TRUE THETAS FOR UNLINKED ORDER    0.500000
+-----------------------------------
+ Elapsed Time for one replicate =     0.01 seconds
+
+ Elapsed Time =     0.03 min. or     0.00 hours
+-----------------------------------
+Actual proportion of unlinked families:  0.000
