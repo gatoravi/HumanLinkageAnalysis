@@ -1,0 +1,2 @@
+ CHR         SNP           BP  A1  A2      T      U           OR        CHISQ            P      A:U_PAR    CHISQ_PAR        P_PAR    CHISQ_COM        P_COM 
+   1   rs6681049            1   2   1     10      0           NA           10     0.001565          1:0            1       0.3173           11    0.0009111 
