@@ -1,0 +1,37 @@
+#Copy over the input files
+#cp /home/gems/m21-5483/lab_imp/* .
+
+
+
+##Formatting
+# cp lab_beagle.dataset.chr15_region.bgl.gprobs.gz lab_beagle.dataset.chr15_region.bgl.gprobs.mod.gz
+# gunzip lab_beagle.dataset.chr15_region.bgl.gprobs.mod.gz
+awk '{ if(NR == 1) { \
+ for (i = i; i <= NF; i++) { \
+    if(i%3 != 0 || i ==3) { \
+       printf($i); \
+    } \
+    if(i != NF) { \
+       printf(" "); \
+    } \
+    else { \
+       printf("\n"); \
+    } \
+ } \
+} \
+else { \
+  print
+}
+}' lab_beagle.dataset.chr15_region.bgl.gprobs.mod  > t
+mv t lab_beagle.dataset.chr15_region.bgl.gprobs.mod
+
+[ramua@fuggle lab_week9]$ awk '$NF <= 0.05' lab_plink.assoc.dosage
+    rs555018   A   G  0.6596  1.0050  0.5200  0.3310 0.04816
+    rs660652   A   G  0.3085  1.0027  1.9969  0.3392 0.04145
+
+
+[ramua@fuggle lab_week9]$ grep rs660652 dataset.chr15_region.bgl
+M rs660652 G A G G G A G G G G G A A G G G A A G G A G A G A A A A G A G G G A G G G G G A A G G A A G A G G G A G G G G G G G G G G G G G G G G A A G A G G G G G A A G A G G G A G A G G G A A A G A G G A G G A G G G G A G G G A A G G G G G A G G A G G G G G G G G G G A G A G G A A G G A A A G G G A G G G A G G G G G A G A G A G G A G A G G G G G A A A G G G G G G A G A G G G G G G G
+[ramua@fuggle lab_week9]$ grep rs660652 reference.chr15_region.bgl
+M rs660652 A A G G G G G G A A A A G G A A A A G G G G G G A A A A G G A A A A G G G G A A A A G G G G G G G G A A G G A A A A G G G G A A G G G G G G A A G G G G A A G G G G G G G G A A G G G G A A A A A A A A G G A A A A G G G G G G A A G G G G G G A A A A A A G G A A A A G G G G G G G G A A G G A A A A G G G G A A G G G G G G G G G G G G A A A A G G A A A A A A G G A A A A A A G G A A A A A A A A G G G G G G G G A A A A G G G G A A A A G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G A A G G G G A A G G A A A A A A G G G G G G A A G G G G G G G G G G A A G G G G A A G G G G G G G G G G G G G G G G G G G G G G G G A A G G G G A A G G G G A A A A G G A A G G G G G G G G G G G G G G G G G G A A G G A A G G G G G G G G A A G G G G G G G G
+

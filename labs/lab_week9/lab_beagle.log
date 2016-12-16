@@ -1,0 +1,17 @@
+Beagle version 3.3.2 (31 Oct 2011)
+Enter "java -jar beagle.jar" for summary of command line arguments.
+Start time: 09:42 AM CST on 08 Nov 2016
+
+Command line: java -Xmx444m -jar beagle.jar
+  unphased=/home/gems/m21-5483/lab_imp/dataset.chr15_region.bgl
+  phased=/home/gems/m21-5483/lab_imp/reference.chr15_region.bgl
+  markers=/home/gems/m21-5483/lab_imp/reference.chr15_region.markers
+  missing=0
+  out=lab_beagle
+
+number of markers    =      70
+number of haplotypes =     188 (dataset.chr15_region.bgl)
+number of haplotypes =     378 (reference.chr15_region.bgl)
+
+Running time for phasing: 2 seconds
+Beagle version 3.3.2 (31 Oct 2011) finished

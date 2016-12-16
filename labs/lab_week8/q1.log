@@ -1,0 +1,47 @@
+
+@----------------------------------------------------------@
+|        PLINK!       |     v1.07      |   10/Aug/2009     |
+|----------------------------------------------------------|
+|  (C) 2009 Shaun Purcell, GNU General Public License, v2  |
+|----------------------------------------------------------|
+|  For documentation, citation & bug-report instructions:  |
+|        http://pngu.mgh.harvard.edu/purcell/plink/        |
+@----------------------------------------------------------@
+
+Skipping web check... [ --noweb ] 
+Writing this text to log file [ q1.log ]
+Analysis started: Mon Oct 31 15:22:43 2016
+
+Options in effect:
+	--file q1
+	--out q1
+	--tdt
+	--noweb
+
+1 (of 1) markers to be included from [ q1.map ]
+30 individuals read from [ q1.ped ] 
+30 individuals with nonmissing phenotypes
+Assuming a disease phenotype (1=unaff, 2=aff, 0=miss)
+Missing phenotype value is also -9
+20 cases, 10 controls and 0 missing
+20 males, 10 females, and 0 of unspecified sex
+Before frequency and genotyping pruning, there are 1 SNPs
+Converting data to SNP-major format
+20 founders and 10 non-founders found
+Total genotyping rate in remaining individuals is 1
+0 SNPs failed missingness test ( GENO > 1 )
+0 SNPs failed frequency test ( MAF < 0 )
+Converting data to Individual-major format
+After frequency and genotyping pruning, there are 1 SNPs
+After filtering, 20 cases, 10 controls and 0 missing
+After filtering, 20 males, 10 females, and 0 of unspecified sex
+10 nuclear families, 0 founder singletons found
+10 non-founders with 2 parents in 10 nuclear families
+0 non-founders without 2 parents in 0 nuclear families
+10 affected offspring trios
+10 phenotypically discordant parent pairs found
+0 Mendel errors detected in total
+Writing TDT results (asymptotic) to [ q1.tdt ] 
+
+Analysis finished: Mon Oct 31 15:22:43 2016
+
